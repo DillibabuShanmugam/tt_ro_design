@@ -3,7 +3,7 @@ module ro(input wire  rst_n,
           input wire  ro_activate,
           output reg  ro_out);
 
-   reg [15:0]         ro_count;
+   //reg [15:0]         ro_count;
    reg                en;
    wire               ro_output;
 
