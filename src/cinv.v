@@ -1,9 +1,9 @@
 (* keep_hierarchy = "yes" *)
-module cinv (input a,            output q);
-
+module cinv(input a,
+            output q);
 
 `ifdef SIM
-   assign #2 q =  ~a;
+   assign #0.7 q =  ~a;
 `else
    assign q = ~a;
 `endif
