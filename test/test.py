@@ -37,7 +37,7 @@ async def test_project(dut):
     dut._log.info(f"Output value: {output_value}")
     await ClockCycles(dut.clk, 3)
     dut.ui_in.value = 11
-    await ClockCycles(dut.clk, 160)
+    await ClockCycles(dut.clk, 1)
     dut.ui_in.value = 0
     # Read and log the output value
     output_value = dut.uo_out.value
