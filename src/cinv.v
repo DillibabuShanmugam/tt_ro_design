@@ -3,7 +3,7 @@ module cinv(input a,
             output q);
 
 `ifdef SIM
-   assign 'UNIT_DELAY q =  ~a;
+   assign #1 q =  ~a;
 `else
    assign q = ~a;
 `endif
