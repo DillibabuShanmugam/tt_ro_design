@@ -27,11 +27,11 @@ module tt_um_ro (
 // Instantiate the ro_buffer_counter module
   wire [7:0] buffer_out;
 
-  ro_buffer ro_buffer_inst (.rst_n(rst_n),
+	ro_buffer ro_buffer_inst (.rst_n(~rst_n),
                             .clk(clk),
                             .ro_activate_1(ui_in[0]),
                             .ro_activate_2(ui_in[1]),
-			                .out_sel(ui_in[4:2]),
+			    .out_sel(ui_in[4:2]),
                             .out(buffer_out)
                            );
 
