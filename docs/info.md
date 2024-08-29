@@ -13,7 +13,7 @@ Ring oscillator
 
 ## How to test
 
-Characterize the RO output and understand the entrophy
+Characterize the RO output and understand the entropy
 
 ## External hardware
 
