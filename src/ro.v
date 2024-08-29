@@ -1,11 +1,11 @@
 module ro(input wire  rst_n,
 	  input wire  clk,
           input wire  ro_activate,
-          output reg  ro_out);
+          output wire  ro_out);
 
    //reg [15:0]         ro_count;
    reg                en;
-   wire               ro_output;
+  // wire               ro_output;
 
 
    (*keep = "true" *) wire q;
