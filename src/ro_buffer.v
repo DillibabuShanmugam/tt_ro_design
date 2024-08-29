@@ -23,7 +23,7 @@ module ro_buffer (
            );
 
    // Instantiate the second ring oscillator
-   ro ro2 (.rst_n(rst_n),
+   ro2 ro2 (.rst_n(rst_n),
            .clk(clk),
            .ro_activate(ro_activate_2),
            .ro_out(ro2_out)
