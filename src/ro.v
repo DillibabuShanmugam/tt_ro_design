@@ -18,9 +18,9 @@ module ro(input wire  rst_n,
    
 
 
-   assign ro_output = ro_count[0];
+   //assign ro_output = ro_count[0];
 
-   //assign ro_out = en ? ro_count[0] : 16'b0;
+   assign ro_out = en ? q : 1'b0;
    
    always @(posedge clk or posedge rst_n) begin
     if (rst_n)
@@ -31,23 +31,23 @@ module ro(input wire  rst_n,
         en <= 1'b0;
     end
 
-    always @(posedge q or posedge rst_n) begin
-     if (rst_n)
-          ro_count <= 16'h0000;
-     else if (ro_count == 16'hffff)
-	  ro_count <= 16'h0000;
-     else
-	  ro_count <= ro_count + 1'b1;
-   end
+   //  always @(posedge q or posedge rst_n) begin
+   //   if (rst_n)
+   //        ro_count <= 16'h0000;
+   //   else if (ro_count == 16'hffff)
+	  // ro_count <= 16'h0000;
+   //   else
+	  // ro_count <= ro_count + 1'b1;
+   // end
 
-    always @(posedge q or posedge rst_n) begin
-    if (rst_n)
-        ro_out <= 1'b0;
-    else if (ro_activate)
-        ro_out <= ro_output;
-    else
-        ro_out <= 1'b0;
-    end
+    // always @(posedge q or posedge rst_n) begin
+    // if (rst_n)
+    //     ro_out <= 1'b0;
+    // else if (ro_activate)
+    //     ro_out <= ro_output;
+    // else
+    //     ro_out <= 1'b0;
+    // end
 
 	
 
