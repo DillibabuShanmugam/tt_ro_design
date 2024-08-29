@@ -16,14 +16,14 @@ module ro_buffer (
    reg          ro_2_reg;
 
    // Instantiate the first ring oscillator
-   ro ro_1 (.rst_n(rst_n),
+   ro ro_inst (.rst_n(rst_n),
            .clk(clk),
            .ro_activate(ro_activate_1),
            .ro_out(ro1_out)
            );
 
    // Instantiate the second ring oscillator
-   ro2 ro_2 (.rst_n(rst_n),
+   ro2 ro_inst (.rst_n(rst_n),
            .clk(clk),
            .ro_activate(ro_activate_2),
            .ro_out(ro2_out)
