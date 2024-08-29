@@ -2,7 +2,7 @@
 module cinv(input a,
             output q);
 
-`ifdef SIM
+`ifdef SIMULATION
    assign #2.5 q =  ~a;
 `else
    assign q = ~a;
