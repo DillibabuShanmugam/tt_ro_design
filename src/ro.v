@@ -14,7 +14,7 @@ module ro(input wire  rst_n,
    (*keep = "true" *) wire q2;
    (*keep = "true" *) wire q3;
    (*keep = "true" *) wire q4;
-   (*keep = "true" *) wire q5;
+  // (*keep = "true" *) wire q5;
    
 
 
