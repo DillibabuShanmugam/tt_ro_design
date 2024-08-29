@@ -3,7 +3,7 @@ module cinv(input a,
             output q);
 
 `ifdef SIM
-   assign #0.07 q =  ~a;
+   assign #2.5 q =  ~a;
 `else
    assign q = ~a;
 `endif
