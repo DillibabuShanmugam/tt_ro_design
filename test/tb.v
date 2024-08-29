@@ -41,38 +41,38 @@ module tb ();
       .clk    (clk),      // clock
       .rst_n  (rst_n)     // not reset
   );
-   // Generate clock signal
-    always #5 clk = ~clk;
+   // // Generate clock signal
+   //  always #5 clk = ~clk;
 
-    // Initial block to drive the test
-    initial begin
-        // Initialize Inputs
-        rst_n = 1'b0;
-        clk = 0;
-        ui_in = 8'b00000000;
+   //  // Initial block to drive the test
+   //  initial begin
+   //      // Initialize Inputs
+   //      rst_n = 1'b0;
+   //      clk = 0;
+   //      ui_in = 8'b00000000;
 
-        // Wait for global reset to finish
-        #10;
+   //      // Wait for global reset to finish
+   //      #10;
 
-        // Apply reset
-        rst_n = 1'b1;
-        //rst_n = 1'b1; 
-        // Activate ring oscillator
-        //ro_activate = 1'b1;
-        ui_in = 8'b00000011;
+   //      // Apply reset
+   //      rst_n = 1'b1;
+   //      //rst_n = 1'b1; 
+   //      // Activate ring oscillator
+   //      //ro_activate = 1'b1;
+   //      ui_in = 8'b00000011;
 
-        // Run for some time
-        #160;
+   //      // Run for some time
+   //      #160;
 
-        // Deactivate ring oscillator
-        //ro_activate = 1'b0;
-        ui_in = 8'b00000100;
+   //      // Deactivate ring oscillator
+   //      //ro_activate = 1'b0;
+   //      ui_in = 8'b00000100;
         
 
-        // Stop simulation
-        #100;
-        $finish;
-    end
+   //      // Stop simulation
+   //      #100;
+   //      $finish;
+   // end
 
 endmodule
 
