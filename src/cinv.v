@@ -1,11 +1,14 @@
 (* keep_hierarchy = "yes" *)
-module cinv(input a,
-            output q);
+module cinv#(	
+  parameter real INV_DELAY_NS = 0.07 /* single inverter delay */
+) (input a,            output q);
 
-`ifdef SIM
-   assign #1 q =  ~a;
-`else
-   assign q = ~a;
-`endif
+not #(INV_DELAY_NS) (y, a);
+
+// `ifdef SIM
+//    assign  q =  ~a;
+// `else
+//    assign q = ~a;
+// `endif
 
 endmodule
