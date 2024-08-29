@@ -21,6 +21,8 @@ project:
     - "ro_buffer.v"
     - "ro.v"
     - "cinv.v"
+    - "ro2.v"
+    - "cinv2.v"
     
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
