@@ -1,5 +1,5 @@
 (* keep_hierarchy = "yes" *)
-module cinv(input a,
+module cinv2(input a,
             output q);
 
 `ifdef SIMULATION
