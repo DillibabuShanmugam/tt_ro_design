@@ -1,4 +1,4 @@
-module ro(input wire  rst_n,
+module ro2(input wire  rst_n,
 	  input wire  clk,
           input wire  ro_activate,
           output wire  ro_out);
@@ -54,11 +54,11 @@ module ro(input wire  rst_n,
    (* keep = "true" *) wire cq4;
    assign cq4 = (en & q4);
 
-   (* keep = 1 *) cinv cinv1(.a(cq4),.q(q0));
-   (* keep = 1 *) cinv cinv2(.a(q0), .q(q1));
-   (* keep = 1 *) cinv cinv3(.a(q1), .q(q2));
-   (* keep = 1 *) cinv cinv4(.a(q2), .q(q3));
-   (* keep = 1 *) cinv cinv5(.a(q3), .q(q4));
+	(* keep = 1 *) cinv2 cinv1(.a(cq4),.q(q0));
+	(* keep = 1 *) cinv2 cinv2(.a(q0), .q(q1));
+	(* keep = 1 *) cinv2 cinv3(.a(q1), .q(q2));
+	(* keep = 1 *) cinv2 cinv4(.a(q2), .q(q3));
+	(* keep = 1 *) cinv2 cinv5(.a(q3), .q(q4));
 
    assign q  = q0;
 
